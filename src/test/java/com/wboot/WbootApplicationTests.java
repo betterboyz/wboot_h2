@@ -1,4 +1,4 @@
-package com.dsz;
+package com.wboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
