@@ -1,0 +1,3 @@
+2018-02-09 10:17:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "NSERT[*] INTO USER VALUES(01, 'Tom',21,0) "; SQL statement:
+NSERT INTO user VALUES(01, 'Tom',21,0) [42000-196]

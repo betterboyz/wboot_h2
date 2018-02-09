@@ -20,9 +20,9 @@ public class UserController {
   @Autowired
   private UserService userService;
 
-  @GetMapping
+  @GetMapping({"/", ""})
   String index() {
-    return "redirect:/index";
+    return "index";
   }
 
   @ResponseBody

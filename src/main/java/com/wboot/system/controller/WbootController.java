@@ -1,6 +1,8 @@
 package com.wboot.system.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author dsz
@@ -8,6 +10,11 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class WbootController {
+
+  @GetMapping({"/", ""})
+  String welcome(Model model) {
+    return "login";
+  }
 
 
 }

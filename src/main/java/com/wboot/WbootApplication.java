@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.wboot.**.dao")
+@MapperScan("com.wboot.*.dao")
 public class WbootApplication {
 
 	public static void main(String[] args) {
