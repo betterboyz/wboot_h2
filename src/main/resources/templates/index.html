@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="setdata">error</div>
+
+<script>
+    $.ajax({
+        url:'/user/getUser/1/10',
+        success:function (data) {
+            console.log(data);
+            document.getElementById('setdata').innerHTML(data.name+data.age+data.sex)
+        }
+    })
+</script>
+</body>
+</html>
