@@ -66,6 +66,13 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>1.1.0</version>
     </dependency>
+
+    <!--spring boot 热部署设置1-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <optional>true</optional>
+    </dependency>
   </dependencies>
 
   <build>
@@ -84,6 +91,15 @@
           <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
           <overwrite>true</overwrite>
           <verbose>true</verbose>
+        </configuration>
+      </plugin>
+
+      <!--spring boot 热部署设置2-->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <fork>true</fork>
         </configuration>
       </plugin>
     </plugins>

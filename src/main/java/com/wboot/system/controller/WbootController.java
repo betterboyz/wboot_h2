@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WbootController {
 
   @GetMapping({"/", ""})
-  String welcome(Model model) {
-    return "login";
+  String index() {
+    return "index";
   }
 
 
