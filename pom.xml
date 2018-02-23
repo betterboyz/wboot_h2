@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.wboot</groupId>
-  <artifactId>wboot</artifactId>
+  <artifactId>wboot_h2</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>wboot</name>
+  <name>wboot_h2</name>
   <description>Demo project for Spring Boot</description>
 
   <parent>
