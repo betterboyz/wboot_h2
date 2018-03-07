@@ -7,7 +7,7 @@
     <properties resource="jdbc.properties"></properties>
     <!--mysql 连接数据库jar 这里选择自己本地位置-->
     <classPathEntry
-            location="${mysql_classPath}"/>
+            location="${h2_classPath}"/>
     <context id="testTables" targetRuntime="MyBatis3">
 
         <!--添加分页插件-->
@@ -19,10 +19,10 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
-        <jdbcConnection driverClass="${mysql_driver}"
-                        connectionURL="${mysql_url}"
-                        userId="${mysql_username}"
-                        password="${mysql_password}">
+        <jdbcConnection driverClass="${h2_driver}"
+                        connectionURL="${h2_url}"
+                        userId="${h2_username}"
+                        password="${h2_password}">
         </jdbcConnection>
         <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
            NUMERIC 类型解析为java.math.BigDecimal -->
@@ -55,7 +55,13 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <!--<table schema="system" tableName="user" domainObjectName="User" mapperName="UserMapper"></table>-->
-        <table schema="" tableName="user"></table>
+        <!--<table schema="system" tableName="user" domainObjectName="User" mapperName="UserMapper">-->
+            <!--&lt;!&ndash;生成的字段名称与数据库中名称一致&ndash;&gt;-->
+            <!--<property name="useActualColumnNames" value="true"/>-->
+        <!--</table>-->
+        <table schema="" tableName="user">
+            <!--生成的字段名称与数据库中名称一致-->
+            <property name="useActualColumnNames" value="true"/>
+        </table>
     </context>
 </generatorConfiguration>
